@@ -36,18 +36,20 @@ public class MPGPanel extends JPanel {
 		add(milesValue);
 	}
 
-	public void showPropertyTax() {
-		// Get the assessmentValue.
-		double assessmentValue = Double.parseDouble(
-				gallonsValue.getText()) * .6;
+	public void showMPG() {
+		// Get the gallons value.
+		double gallons = Double.parseDouble(
+				gallonsValue.getText());
 		// Get the property tax.
-		double propertyTax = assessmentValue * .0064;
+		double miles = Double.parseDouble(
+				milesValue.getText());
+		// calculate mpg
+		double mpg = miles/gallons;
 		// Display them.
 		JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"Assessment Value: $%,.2f\nProperty tax: $%,.2f",
-						assessmentValue,
-						propertyTax));
+						"You got %,.2f miles per gallon",
+						mpg));
 	}
 }

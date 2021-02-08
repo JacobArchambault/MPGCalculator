@@ -22,7 +22,7 @@ public class MPGCalculator extends JFrame {
 		@Override
 		public void actionPerformed(
 				ActionEvent e) {
-			mPGPanel.showPropertyTax();
+			mPGPanel.showMPG();
 		}
 	} // End of inner class
 
