@@ -31,15 +31,15 @@ public class MPGCalculator extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 
-
-
 	private MPGPanel mPGPanel; // A panel for entering miles and gallons data
 
 	/**
 	 * Constructor
 	 */
-	public MPGCalculator(String title) {
-		super(title);
+	public MPGCalculator(
+			String title) {
+		super(
+				title);
 		// Specify what happens when the close button is clicked.
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
@@ -52,17 +52,9 @@ public class MPGCalculator extends JFrame {
 				true);
 	}
 
-	private void buildMPGPanel() {
-		// Create a MPGPanel object.
-		mPGPanel = new MPGPanel();
-		// Add the panels to the content pane.
-		add(
-				mPGPanel,
-				BorderLayout.CENTER);
-	}
-
 	/**
-	 * The buildButtonPanel method creates a panel containing the calc property tax button.
+	 * The buildButtonPanel method creates a panel containing the button for
+	 * calculating mpg.
 	 */
 	private void buildButtonPanel() {
 		// Create a button to calculate MPG.
@@ -79,6 +71,15 @@ public class MPGCalculator extends JFrame {
 				buttonPanel,
 				BorderLayout.SOUTH);
 
+	}
+
+	private void buildMPGPanel() {
+		// Create a MPGPanel object.
+		mPGPanel = new MPGPanel();
+		// Add it to the content pane.
+		add(
+				mPGPanel,
+				BorderLayout.CENTER);
 	}
 
 }

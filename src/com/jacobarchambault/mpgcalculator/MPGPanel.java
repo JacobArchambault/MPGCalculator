@@ -11,7 +11,6 @@ public class MPGPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private JTextField gallonsValue; // To get gallons value
 	private JTextField milesValue; // for miles input
-	
 
 	/**
 	 * Constructor
@@ -20,7 +19,8 @@ public class MPGPanel extends JPanel {
 		// Initialize text fields.
 		gallonsValue = new JTextField(
 				10);
-		milesValue = new JTextField(10);
+		milesValue = new JTextField(
+				10);
 		// Create a GridLayout manager.
 		setLayout(
 				new GridLayout(
@@ -32,19 +32,22 @@ public class MPGPanel extends JPanel {
 						"Total number of gallons:"));
 		add(
 				gallonsValue);
-		add(new JLabel("Number of miles driven:"));
-		add(milesValue);
+		add(
+				new JLabel(
+						"Number of miles driven:"));
+		add(
+				milesValue);
 	}
 
 	public void showMPG() {
 		// Get the gallons value.
 		double gallons = Double.parseDouble(
 				gallonsValue.getText());
-		// Get the property tax.
+		// Get the miles value.
 		double miles = Double.parseDouble(
 				milesValue.getText());
 		// calculate mpg
-		double mpg = miles/gallons;
+		double mpg = miles / gallons;
 		// Display them.
 		JOptionPane.showMessageDialog(
 				null,
