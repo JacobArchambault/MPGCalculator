@@ -9,32 +9,37 @@ import javax.swing.JTextField;
 
 public class MPGPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
-	private JTextField propertyValue; // To get property value
+	private JTextField gallonsValue; // To get gallons value
+	private JTextField milesValue;
+	
 
 	/**
 	 * Constructor
 	 */
 	public MPGPanel() {
 		// Create a text field.
-		propertyValue = new JTextField(
+		gallonsValue = new JTextField(
 				10);
+		milesValue = new JTextField(10);
 		// Create a GridLayout manager.
 		setLayout(
 				new GridLayout(
-						1,
+						2,
 						2));
 		// Add the labels and text fields to this panel.
 		add(
 				new JLabel(
-						"Enter the actual property value:"));
+						"Total number of gallons:"));
 		add(
-				propertyValue);
+				gallonsValue);
+		add(new JLabel("Number of miles driven:"));
+		add(milesValue);
 	}
 
 	public void showPropertyTax() {
 		// Get the assessmentValue.
 		double assessmentValue = Double.parseDouble(
-				propertyValue.getText()) * .6;
+				gallonsValue.getText()) * .6;
 		// Get the property tax.
 		double propertyTax = assessmentValue * .0064;
 		// Display them.
