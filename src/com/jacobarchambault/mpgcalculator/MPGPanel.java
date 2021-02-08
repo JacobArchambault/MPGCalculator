@@ -10,14 +10,14 @@ import javax.swing.JTextField;
 public class MPGPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private JTextField gallonsValue; // To get gallons value
-	private JTextField milesValue;
+	private JTextField milesValue; // for miles input
 	
 
 	/**
 	 * Constructor
 	 */
 	public MPGPanel() {
-		// Create a text field.
+		// Initialize text fields.
 		gallonsValue = new JTextField(
 				10);
 		milesValue = new JTextField(10);
