@@ -7,21 +7,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-/**
- * The MinutesPanel class for use with the Long Distance Calls programming
- * challenge.
- */
-public class PropertyTaxPanel extends JPanel {
-	/**
-	 * 
-	 */
+public class MPGPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private JTextField propertyValue; // To get property value
 
 	/**
 	 * Constructor
 	 */
-	public PropertyTaxPanel() {
+	public MPGPanel() {
 		// Create a text field.
 		propertyValue = new JTextField(
 				10);
