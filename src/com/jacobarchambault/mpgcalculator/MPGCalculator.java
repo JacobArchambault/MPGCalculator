@@ -33,7 +33,7 @@ public class MPGCalculator extends JFrame {
 
 
 
-	private MPGPanel mPGPanel; // A panel for displaying assessmentValue and tax
+	private MPGPanel mPGPanel; // A panel for displaying miles per gallon
 
 	/**
 	 * Constructor
@@ -43,18 +43,22 @@ public class MPGCalculator extends JFrame {
 		// Specify what happens when the close button is clicked.
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
-		// Create a PropertyTaxPanel object.
-		mPGPanel = new MPGPanel();
+		buildMPGPanel();
 		// Build the panel that contains the button.
 		buildButtonPanel();
-		// Add the panels to the content pane.
-		add(
-				mPGPanel,
-				BorderLayout.CENTER);
 		// Pack and display the window.
 		pack();
 		setVisible(
 				true);
+	}
+
+	private void buildMPGPanel() {
+		// Create a MPGPanel object.
+		mPGPanel = new MPGPanel();
+		// Add the panels to the content pane.
+		add(
+				mPGPanel,
+				BorderLayout.CENTER);
 	}
 
 	/**
