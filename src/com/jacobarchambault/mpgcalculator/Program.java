@@ -1,4 +1,4 @@
-package com.jacobarchambault.propertytaxcalculator;
+package com.jacobarchambault.mpgcalculator;
 
 public class Program {
 	public static void main(

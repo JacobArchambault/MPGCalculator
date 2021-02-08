@@ -1,4 +1,4 @@
-package com.jacobarchambault.propertytaxcalculator;
+package com.jacobarchambault.mpgcalculator;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
