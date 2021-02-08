@@ -22,7 +22,7 @@ public class MPGCalculator extends JFrame {
 		@Override
 		public void actionPerformed(
 				ActionEvent e) {
-			propertyTaxPanel.showPropertyTax();
+			mPGPanel.showPropertyTax();
 		}
 	} // End of inner class
 
@@ -33,7 +33,7 @@ public class MPGCalculator extends JFrame {
 
 
 
-	private MPGPanel propertyTaxPanel; // A panel for displaying assessmentValue and tax
+	private MPGPanel mPGPanel; // A panel for displaying assessmentValue and tax
 
 	/**
 	 * Constructor
@@ -44,12 +44,12 @@ public class MPGCalculator extends JFrame {
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
 		// Create a PropertyTaxPanel object.
-		propertyTaxPanel = new MPGPanel();
+		mPGPanel = new MPGPanel();
 		// Build the panel that contains the button.
 		buildButtonPanel();
 		// Add the panels to the content pane.
 		add(
-				propertyTaxPanel,
+				mPGPanel,
 				BorderLayout.CENTER);
 		// Pack and display the window.
 		pack();
