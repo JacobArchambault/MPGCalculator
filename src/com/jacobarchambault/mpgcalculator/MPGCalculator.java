@@ -11,22 +11,6 @@ import javax.swing.WindowConstants;
 
 public class MPGCalculator extends JFrame {
 	/**
-	 * CalcButtonListener is an action listener class for the calcButton component.
-	 */
-	private class CalcButtonListener implements ActionListener {
-		/**
-		 * actionPerformed method
-		 * 
-		 * @param e An ActionEvent object.
-		 */
-		@Override
-		public void actionPerformed(
-				ActionEvent e) {
-			mPGPanel.showMPG();
-		}
-	} // End of inner class
-
-	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -61,8 +45,7 @@ public class MPGCalculator extends JFrame {
 		JButton calcButton = new JButton(
 				"Calculate MPG");
 		// Add an action listener to the button.
-		calcButton.addActionListener(
-				new CalcButtonListener());
+		calcButton.addActionListener(e -> mPGPanel.showMPG());
 		// Put the button in its own panel.
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.add(
